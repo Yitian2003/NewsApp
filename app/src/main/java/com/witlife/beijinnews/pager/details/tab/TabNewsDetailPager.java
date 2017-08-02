@@ -1,4 +1,4 @@
-package com.witlife.beijinnews.pager;
+package com.witlife.beijinnews.pager.details.tab;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,6 +31,7 @@ import com.witlife.beijinnews.bean.TabDetailPagerBean;
 import com.witlife.beijinnews.util.CacheUtils;
 import com.witlife.beijinnews.util.Contants;
 import com.witlife.beijinnews.util.DensityUtil;
+import com.witlife.beijinnews.view.HorizontalScrollViewPager;
 
 import org.xutils.image.ImageOptions;
 
@@ -40,9 +42,9 @@ import java.util.List;
  * Created by bruce on 2/08/2017.
  */
 
-public class TabDetailPager extends DetailBasePager {
+public class TabNewsDetailPager extends DetailBasePager {
 
-    private ViewPager viewPager;
+    private HorizontalScrollViewPager viewPager;
     private TextView tvTitle;
     private LinearLayout linarLayout;
     private ListView listview;
@@ -56,7 +58,7 @@ public class TabDetailPager extends DetailBasePager {
     private TabTopNewsListAdpter listAdpter;
 
 
-    public TabDetailPager(Context context, NewsCenterPagerBean.DataEntity.ChildrenData childrenData) {
+    public TabNewsDetailPager(Context context, NewsCenterPagerBean.DataEntity.ChildrenData childrenData) {
         super(context);
 
         this.childrenData = childrenData;
@@ -75,11 +77,12 @@ public class TabDetailPager extends DetailBasePager {
         listview = (ListView) view.findViewById(R.id.listview);
 
         View topNewsHeaderView = View.inflate(context, R.layout.tab_detail_list_header, null);
-        viewPager = (ViewPager) topNewsHeaderView.findViewById(R.id.viewPager);
+        viewPager = (HorizontalScrollViewPager) topNewsHeaderView.findViewById(R.id.viewPager);
         tvTitle = (TextView) topNewsHeaderView.findViewById(R.id.tvTitle);
         linarLayout = (LinearLayout) topNewsHeaderView.findViewById(R.id.linarLayout);
 
         listview.addHeaderView(topNewsHeaderView);
+
         return view;
     }
 
@@ -175,7 +178,7 @@ public class TabDetailPager extends DetailBasePager {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
-                //Log.i("TabDetailPager--Failure", e.getMessage());
+                //Log.i("TabNewsDetailPager--Failure", e.getMessage());
             }
 
             @Override
@@ -192,7 +195,7 @@ public class TabDetailPager extends DetailBasePager {
                     });
 
                 } else {
-                    //Log.i("TabDetailPager--error", " "+ response.code());
+                    //Log.i("TabNewsDetailPager--error", " "+ response.code());
                 }
             }
         });

@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import com.witlife.beijinnews.R;
 import com.witlife.beijinnews.bean.TabDetailPagerBean;
 import com.witlife.beijinnews.util.Contants;
+import com.witlife.beijinnews.util.DensityUtil;
 
+import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
 import java.util.List;

@@ -4,8 +4,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.witlife.beijinnews.bean.NewsCenterPagerBean;
-import com.witlife.beijinnews.pager.TabDetailPager;
+import com.witlife.beijinnews.pager.details.tab.TabNewsDetailPager;
 
 import java.util.List;
 
@@ -15,22 +14,22 @@ import java.util.List;
 
 public class NewsDetailPagerAdpter extends PagerAdapter{
 
-    private List<TabDetailPager> tabDetailPagers;
+    private List<TabNewsDetailPager> tabNewsDetailPagers;
 
-    public NewsDetailPagerAdpter(List<TabDetailPager> tabDetailPagers) {
-       this.tabDetailPagers = tabDetailPagers;
+    public NewsDetailPagerAdpter(List<TabNewsDetailPager> tabNewsDetailPagers) {
+       this.tabNewsDetailPagers = tabNewsDetailPagers;
     }
 
     @Override
     public int getCount() {
-        return tabDetailPagers.size();
+        return tabNewsDetailPagers.size();
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        View view = tabDetailPagers.get(position).rootView;
-        tabDetailPagers.get(position).initData();
+        View view = tabNewsDetailPagers.get(position).rootView;
+        tabNewsDetailPagers.get(position).initData();
         container.addView(view);
         return view;
 
@@ -48,6 +47,6 @@ public class NewsDetailPagerAdpter extends PagerAdapter{
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabDetailPagers.get(position).getChildrenData().getTitle();
+        return tabNewsDetailPagers.get(position).getChildrenData().getTitle();
     }
 }

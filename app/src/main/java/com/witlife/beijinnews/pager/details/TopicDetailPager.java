@@ -1,4 +1,4 @@
-package com.witlife.beijinnews.pager;
+package com.witlife.beijinnews.pager.details;
 
 import android.content.Context;
 import android.view.View;
@@ -9,10 +9,10 @@ import com.witlife.beijinnews.base.DetailBasePager;
  * Created by bruce on 1/08/2017.
  */
 
-public class PhotosDetailPager extends DetailBasePager {
+public class TopicDetailPager extends DetailBasePager {
 
 
-    public PhotosDetailPager(Context context) {
+    public TopicDetailPager(Context context) {
         super(context);
     }
 

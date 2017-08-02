@@ -2,7 +2,6 @@ package com.witlife.beijinnews.pager;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -10,12 +9,15 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.witlife.beijinnews.activity.MainActivity;
 import com.witlife.beijinnews.base.BasePager;
 import com.witlife.beijinnews.base.DetailBasePager;
 import com.witlife.beijinnews.bean.NewsCenterPagerBean;
 import com.witlife.beijinnews.fragment.LeftMenuFragment;
+import com.witlife.beijinnews.pager.details.InteractDetailPager;
+import com.witlife.beijinnews.pager.details.NewsDetailPager;
+import com.witlife.beijinnews.pager.details.PhotosDetailPager;
+import com.witlife.beijinnews.pager.details.TopicDetailPager;
 import com.witlife.beijinnews.util.CacheUtils;
 import com.witlife.beijinnews.util.Contants;
 
@@ -23,7 +25,6 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 

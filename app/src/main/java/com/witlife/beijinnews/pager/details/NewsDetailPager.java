@@ -1,18 +1,17 @@
-package com.witlife.beijinnews.pager;
+package com.witlife.beijinnews.pager.details;
 
 import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.witlife.beijinnews.R;
 import com.witlife.beijinnews.activity.MainActivity;
 import com.witlife.beijinnews.adapter.NewsDetailPagerAdpter;
 import com.witlife.beijinnews.base.DetailBasePager;
 import com.witlife.beijinnews.bean.NewsCenterPagerBean;
+import com.witlife.beijinnews.pager.details.tab.TabNewsDetailPager;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -36,7 +35,7 @@ public class NewsDetailPager extends DetailBasePager {
     private ImageButton ib_tab_next;
 
     private List<NewsCenterPagerBean.DataEntity.ChildrenData> children;
-    private List<TabDetailPager> tabDetailPagers;
+    private List<TabNewsDetailPager> tabNewsDetailPagers;
 
     public NewsDetailPager(Context context, NewsCenterPagerBean.DataEntity dataEntity) {
         super(context);
@@ -83,12 +82,12 @@ public class NewsDetailPager extends DetailBasePager {
     public void initData() {
         super.initData();
 
-        tabDetailPagers = new ArrayList<>();
+        tabNewsDetailPagers = new ArrayList<>();
         for (int i = 0; i< children.size(); i++){
-            tabDetailPagers.add(new TabDetailPager(context, children.get(i)));
+            tabNewsDetailPagers.add(new TabNewsDetailPager(context, children.get(i)));
         }
 
-        viewPager.setAdapter(new NewsDetailPagerAdpter(tabDetailPagers));
+        viewPager.setAdapter(new NewsDetailPagerAdpter(tabNewsDetailPagers));
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
     }
