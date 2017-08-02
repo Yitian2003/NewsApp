@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.witlife.beijinnews.view.NoScrollViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+    </com.witlife.beijinnews.view.NoScrollViewPager>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_home_drawable_selector"
+            android:gravity="center"
+            android:text="Main" />
+
+        <RadioButton
+            android:id="@+id/rb_news"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_news_drawable_selector"
+            android:gravity="center"
+            android:text="News" />
+        <RadioButton
+            android:id="@+id/rb_smart"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_smart_drawable_selector"
+            android:gravity="center"
+            android:text="Smart" />
+
+        <RadioButton
+            android:id="@+id/rb_gov"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_gov_drawable_selector"
+            android:gravity="center"
+            android:text="Gov" />
+
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_setting_drawable_selector"
+            android:gravity="center"
+            android:text="Setting" />
+
+    </RadioGroup>
+
+</LinearLayout>
