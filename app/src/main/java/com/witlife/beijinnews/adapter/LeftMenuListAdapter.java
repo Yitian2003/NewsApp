@@ -1,10 +1,8 @@
 package com.witlife.beijinnews.adapter;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -45,7 +43,7 @@ public class LeftMenuListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        TextView textView = (TextView) View.inflate(context, R.layout.iterm_leftmenu, null);
+        TextView textView = (TextView) View.inflate(context, R.layout.item_leftmenu, null);
         textView.setText(data.get(position).getTitle());
 
         if (prePosition == position) {
