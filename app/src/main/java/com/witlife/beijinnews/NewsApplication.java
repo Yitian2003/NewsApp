@@ -16,5 +16,6 @@ public class NewsApplication extends Application {
 
         x.Ext.init(this);
         x.Ext.setDebug(BuildConfig.DEBUG);
+
     }
 }

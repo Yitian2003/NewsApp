@@ -12,7 +12,7 @@
 
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="bottom_tag_style" >
+    <style name="bottom_tag_style">
         <!-- Customize your theme here. -->
         <item name="android:button">@null</item>
         <item name="android:drawablePadding">5dp</item>

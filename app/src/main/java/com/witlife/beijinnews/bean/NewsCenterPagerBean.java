@@ -45,6 +45,11 @@ public class NewsCenterPagerBean {
         private int id;
         private String title;
         private int type;
+        private String url;
+        private String url1;
+        private String dayurl;
+        private String excurl;
+        private String weekurl;
 
         private List<ChildrenData> children;
 
@@ -74,6 +79,46 @@ public class NewsCenterPagerBean {
 
         public int getType() {
             return type;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public String getUrl1() {
+            return url1;
+        }
+
+        public void setUrl1(String url1) {
+            this.url1 = url1;
+        }
+
+        public String getDayurl() {
+            return dayurl;
+        }
+
+        public void setDayurl(String dayurl) {
+            this.dayurl = dayurl;
+        }
+
+        public String getExcurl() {
+            return excurl;
+        }
+
+        public void setExcurl(String excurl) {
+            this.excurl = excurl;
+        }
+
+        public String getWeekurl() {
+            return weekurl;
+        }
+
+        public void setWeekurl(String weekurl) {
+            this.weekurl = weekurl;
         }
 
         public List<ChildrenData> getChildren() {
