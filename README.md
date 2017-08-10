@@ -16,3 +16,9 @@ Finished Feature:
 <br>
 3. request using OkHttpClient
 </br>
+<br>
+4. use L1,L2,L3 cache save image
+</br>
+<br>
+5. interact between Java and Javascript, and webview
+</br>
